@@ -3,6 +3,10 @@ import Alamofire
 
 class ViewController: UIViewController {
     
+    enum Constants {
+        static let url = "https://jsonplaceholder.typicode.com/users"
+    }
+    
     var spinner = SpinnerViewController()
     
     let tableView = UITableView()
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
     
     private func fetchUsers() {
         view.addSubview(spinner.view)
-        AF.request("https://jsonplaceholder.typicode.com/users", method: .get ).responseDecodable(of: Users.self) { response in
+        AF.request(Constants.url, method: .get ).responseDecodable(of: Users.self) { response in
             switch response.result {
             case .success(let data):
                 self.users = data
