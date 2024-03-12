@@ -16,32 +16,46 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSpinner()
         setupTable()
-        fetchUsers()
+        
+        fetchUsers() { data in
+            self.users = data
+        }
     }
     
-    private func fetchUsers() {
-        view.addSubview(spinner.view)
-        AF.request(Constants.url, method: .get ).responseDecodable(of: Users.self) { response in
-            switch response.result {
-            case .success(let data):
-                self.users = data
-            case .failure(let error):
-                print(error)
+    private func fetchUsers(completion: @escaping (_ data: Users) -> ()) {
+        self.showSpinner()
+        DispatchQueue.global().async {
+            AF.request(Constants.url, method: .get ).responseDecodable(of: Users.self) { response in
+                switch response.result {
+                    case .success(let data):
+                        completion(data)
+                    case .failure(let error):
+                        print(error)
+                    }
+                self.hideSpinner()
             }
-            self.spinner.willMove(toParent: nil)
-            self.spinner.view.removeFromSuperview()
-            self.spinner.removeFromParent()
         }
+   
+    }
+    
+    private func showSpinner() {
+        view.addSubview(spinner.view)
     }
     
     private func setupSpinner() {
         spinner.view.frame = view.frame
+    }
+    
+    private func hideSpinner() {
+        self.spinner.willMove(toParent: nil)
+        self.spinner.view.removeFromSuperview()
+        self.spinner.removeFromParent()
     }
     
     private func setupTable() {
