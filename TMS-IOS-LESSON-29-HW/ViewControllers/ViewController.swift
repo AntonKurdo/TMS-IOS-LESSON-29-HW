@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     let tableView = UITableView()
     
-    var users: Users = [] {
+    var users: [User] = [] {
         didSet {
             self.tableView.reloadData()
         }
@@ -28,10 +28,10 @@ class ViewController: UIViewController {
         }
     }
     
-    private func fetchUsers(completion: @escaping (_ data: Users) -> ()) {
+    private func fetchUsers(completion: @escaping (_ data: [User]) -> ()) {
         self.showSpinner()
         DispatchQueue.global().async {
-            AF.request(Constants.url, method: .get ).responseDecodable(of: Users.self) { response in
+            AF.request(Constants.url, method: .get ).responseDecodable(of: [User].self) { response in
                 switch response.result {
                     case .success(let data):
                         completion(data)

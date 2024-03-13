@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040BF7402BA230E3007D76B3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF73F2BA230E3007D76B3 /* Address.swift */; };
+		040BF7422BA230F6007D76B3 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF7412BA230F6007D76B3 /* Geo.swift */; };
+		040BF7442BA2310B007D76B3 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BF7432BA2310B007D76B3 /* Company.swift */; };
 		040CB9A32B8F2F6E003E3AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CB9A22B8F2F6E003E3AA6 /* AppDelegate.swift */; };
 		040CB9A52B8F2F6E003E3AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CB9A42B8F2F6E003E3AA6 /* SceneDelegate.swift */; };
 		040CB9A72B8F2F6E003E3AA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040CB9A62B8F2F6E003E3AA6 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040BF73F2BA230E3007D76B3 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		040BF7412BA230F6007D76B3 /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		040BF7432BA2310B007D76B3 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		040CB99F2B8F2F6E003E3AA6 /* TMS-IOS-LESSON-29-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMS-IOS-LESSON-29-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		040CB9A22B8F2F6E003E3AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		040CB9A42B8F2F6E003E3AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040BF7452BA2315B007D76B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				040CB9AD2B8F2F71003E3AA6 /* LaunchScreen.storyboard */,
+				040CB9AB2B8F2F70003E3AA6 /* Assets.xcassets */,
+				040CB9B02B8F2F71003E3AA6 /* Info.plist */,
+				040CB9A82B8F2F6E003E3AA6 /* Main.storyboard */,
+				040CB9A42B8F2F6E003E3AA6 /* SceneDelegate.swift */,
+				040CB9A22B8F2F6E003E3AA6 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		040CB9962B8F2F6E003E3AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +83,10 @@
 		040CB9A12B8F2F6E003E3AA6 /* TMS-IOS-LESSON-29-HW */ = {
 			isa = PBXGroup;
 			children = (
+				040BF7452BA2315B007D76B3 /* Resources */,
 				0468C0892B8F40C5006F985B /* ViewControllers */,
 				0468C0842B8F3DBC006F985B /* Extensions */,
 				0468C0812B8F364C006F985B /* Model */,
-				040CB9A22B8F2F6E003E3AA6 /* AppDelegate.swift */,
-				040CB9A42B8F2F6E003E3AA6 /* SceneDelegate.swift */,
-				040CB9A82B8F2F6E003E3AA6 /* Main.storyboard */,
-				040CB9AB2B8F2F70003E3AA6 /* Assets.xcassets */,
-				040CB9AD2B8F2F71003E3AA6 /* LaunchScreen.storyboard */,
-				040CB9B02B8F2F71003E3AA6 /* Info.plist */,
 			);
 			path = "TMS-IOS-LESSON-29-HW";
 			sourceTree = "<group>";
@@ -81,6 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				0468C0822B8F365D006F985B /* User.swift */,
+				040BF7432BA2310B007D76B3 /* Company.swift */,
+				040BF73F2BA230E3007D76B3 /* Address.swift */,
+				040BF7412BA230F6007D76B3 /* Geo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,10 +198,13 @@
 			files = (
 				0468C0832B8F365D006F985B /* User.swift in Sources */,
 				040CB9A72B8F2F6E003E3AA6 /* ViewController.swift in Sources */,
+				040BF7442BA2310B007D76B3 /* Company.swift in Sources */,
 				0468C0862B8F3DD0006F985B /* ViewController+ext.swift in Sources */,
 				040CB9A32B8F2F6E003E3AA6 /* AppDelegate.swift in Sources */,
 				0468C0882B8F3ED8006F985B /* SpinnerViewController.swift in Sources */,
 				040CB9A52B8F2F6E003E3AA6 /* SceneDelegate.swift in Sources */,
+				040BF7402BA230E3007D76B3 /* Address.swift in Sources */,
+				040BF7422BA230F6007D76B3 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3LRJV66ML;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TMS-IOS-LESSON-29-HW/Info.plist";
+				INFOPLIST_FILE = "TMS-IOS-LESSON-29-HW/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -366,7 +386,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3LRJV66ML;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TMS-IOS-LESSON-29-HW/Info.plist";
+				INFOPLIST_FILE = "TMS-IOS-LESSON-29-HW/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
